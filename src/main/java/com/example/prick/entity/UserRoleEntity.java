@@ -1,11 +1,11 @@
 package com.example.prick.entity;
 
-public class UserRole {
+public class UserRoleEntity {
     private long userRoleId;
 
-    private User user;
+    private UserEntity user;
 
-    private SubCode subCode;
+    private SubCodeEntity subCode;
 
     private String role;
 }

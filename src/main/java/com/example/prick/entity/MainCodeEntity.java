@@ -1,6 +1,6 @@
 package com.example.prick.entity;
 
-public class MainCode {
+public class MainCodeEntity {
 
     private long MainCodeId;
 

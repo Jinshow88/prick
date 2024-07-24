@@ -1,10 +1,10 @@
 package com.example.prick.entity;
 
-public class FeedPics {
+public class FeedPicsEntity {
 
     private long feedPicId;
 
-    private Feed feed;
+    private FeedEntity feed;
 
     private String pic;
 }

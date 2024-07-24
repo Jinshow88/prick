@@ -10,6 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("")
-@Tag(name = "유저 컨트롤러")
-public class UserContoller {
+@Tag(name = "피드 컨트롤러")
+public class FeedController {
 }

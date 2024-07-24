@@ -2,13 +2,13 @@ package com.example.prick.entity;
 
 import jakarta.persistence.*;
 
-public class Feed {
+public class FeedEntity {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long feedId;
 
     @ManyToOne
     @JoinColumn(name = "user_id",nullable = false)
-    private User user;
+    private UserEntity user;
 
     @Column(length = 1000)
     private String contents;

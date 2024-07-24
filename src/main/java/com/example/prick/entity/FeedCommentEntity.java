@@ -1,12 +1,12 @@
 package com.example.prick.entity;
 
-public class FeedComment {
+public class FeedCommentEntity {
 
     private long feedCommentId;
 
-    private Feed feed;
+    private FeedEntity feed;
 
-    private User user;
+    private UserEntity user;
 
     private String comment;
 }

@@ -1,9 +1,9 @@
 package com.example.prick.entity;
 
-public class SubCode {
+public class SubCodeEntity {
     private long subCodeId;
 
-    private MainCode mainCode;
+    private MainCodeEntity mainCode;
 
     private String val;
 

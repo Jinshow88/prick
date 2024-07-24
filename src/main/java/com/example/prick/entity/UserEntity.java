@@ -1,5 +1,6 @@
 package com.example.prick.entity;
 
+import com.example.prick.entity.common.UpdateAt;
 import jakarta.persistence.*;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -10,7 +11,7 @@ import lombok.Setter;
 @Setter
 @Getter
 @Entity
-public class User extends UpdateAt{
+public class UserEntity extends UpdateAt {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long userId;
 
