@@ -1,0 +1,143 @@
+[2024-07-24 21:02:54 [32mINFO [0;39m restartedMain] [com.example.prick.PrickApplication] [36mStarting PrickApplication using Java 17.0.10 with PID 8688 (E:\tice\prick\build\classes\java\main started by HOME in E:\tice\prick)[0;39m
+[2024-07-24 21:02:54 [32mINFO [0;39m restartedMain] [com.example.prick.PrickApplication] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
+[2024-07-24 21:02:54 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mDevtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable[0;39m
+[2024-07-24 21:02:54 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mFor additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'[0;39m
+[2024-07-24 21:02:54 [33mWARN [0;39m restartedMain] [org.mybatis.spring.mapper.ClassPathMapperScanner] [36mNo MyBatis mapper was found in '[com.example.prick]' package. Please check your configuration.[0;39m
+[2024-07-24 21:02:55 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8080 (http)[0;39m
+[2024-07-24 21:02:55 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8080"][0;39m
+[2024-07-24 21:02:55 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
+[2024-07-24 21:02:55 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardEngine] [36mStarting Servlet engine: [Apache Tomcat/10.1.26][0;39m
+[2024-07-24 21:02:55 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring embedded WebApplicationContext[0;39m
+[2024-07-24 21:02:55 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [36mRoot WebApplicationContext: initialization completed in 913 ms[0;39m
+[2024-07-24 21:02:55 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
+[2024-07-24 21:02:55 [32mINFO [0;39m restartedMain] [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver] [36mExposing 15 endpoints beneath base path '/actuator'[0;39m
+[2024-07-24 21:02:55 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8080"][0;39m
+[2024-07-24 21:02:55 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8080 (http) with context path '/'[0;39m
+[2024-07-24 21:02:55 [32mINFO [0;39m restartedMain] [com.example.prick.PrickApplication] [36mStarted PrickApplication in 1.818 seconds (process running for 2.17)[0;39m
+[2024-07-24 21:02:56 [32mINFO [0;39m RMI TCP Connection(2)-192.168.9.15] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring DispatcherServlet 'dispatcherServlet'[0;39m
+[2024-07-24 21:02:56 [32mINFO [0;39m RMI TCP Connection(2)-192.168.9.15] [org.springframework.web.servlet.DispatcherServlet] [36mInitializing Servlet 'dispatcherServlet'[0;39m
+[2024-07-24 21:02:56 [32mINFO [0;39m RMI TCP Connection(3)-192.168.9.15] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Starting...[0;39m
+[2024-07-24 21:02:56 [32mINFO [0;39m RMI TCP Connection(2)-192.168.9.15] [org.springframework.web.servlet.DispatcherServlet] [36mCompleted initialization in 1 ms[0;39m
+[2024-07-24 21:02:56 [32mINFO [0;39m RMI TCP Connection(3)-192.168.9.15] [com.zaxxer.hikari.pool.HikariPool] [36mHikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@671e79aa[0;39m
+[2024-07-24 21:02:56 [32mINFO [0;39m RMI TCP Connection(3)-192.168.9.15] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Start completed.[0;39m
+[2024-07-24 21:03:04 [32mINFO [0;39m http-nio-8080-exec-4] [org.springdoc.api.AbstractOpenApiResource] [36mInit duration for springdoc-openapi is: 32 ms[0;39m
+[2024-07-24 21:03:05 [32mINFO [0;39m http-nio-8080-exec-8] [org.springdoc.api.AbstractOpenApiResource] [36mInit duration for springdoc-openapi is: 8 ms[0;39m
+[2024-07-24 21:03:06 [32mINFO [0;39m http-nio-8080-exec-2] [org.springdoc.api.AbstractOpenApiResource] [36mInit duration for springdoc-openapi is: 9 ms[0;39m
+[2024-07-24 21:03:09 [32mINFO [0;39m http-nio-8080-exec-6] [org.springdoc.api.AbstractOpenApiResource] [36mInit duration for springdoc-openapi is: 8 ms[0;39m
+[2024-07-24 21:08:15 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown initiated...[0;39m
+[2024-07-24 21:08:15 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown completed.[0;39m
+[2024-07-24 21:08:16 [32mINFO [0;39m restartedMain] [com.example.prick.PrickApplication] [36mStarting PrickApplication using Java 17.0.10 with PID 4268 (E:\tice\prick\build\classes\java\main started by HOME in E:\tice\prick)[0;39m
+[2024-07-24 21:08:16 [32mINFO [0;39m restartedMain] [com.example.prick.PrickApplication] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
+[2024-07-24 21:08:16 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mDevtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable[0;39m
+[2024-07-24 21:08:16 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mFor additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'[0;39m
+[2024-07-24 21:08:17 [33mWARN [0;39m restartedMain] [org.mybatis.spring.mapper.ClassPathMapperScanner] [36mNo MyBatis mapper was found in '[com.example.prick]' package. Please check your configuration.[0;39m
+[2024-07-24 21:08:17 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8080 (http)[0;39m
+[2024-07-24 21:08:17 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8080"][0;39m
+[2024-07-24 21:08:17 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
+[2024-07-24 21:08:17 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardEngine] [36mStarting Servlet engine: [Apache Tomcat/10.1.26][0;39m
+[2024-07-24 21:08:17 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring embedded WebApplicationContext[0;39m
+[2024-07-24 21:08:17 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [36mRoot WebApplicationContext: initialization completed in 783 ms[0;39m
+[2024-07-24 21:08:18 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
+[2024-07-24 21:08:18 [32mINFO [0;39m restartedMain] [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver] [36mExposing 15 endpoints beneath base path '/actuator'[0;39m
+[2024-07-24 21:08:18 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8080"][0;39m
+[2024-07-24 21:08:18 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8080 (http) with context path '/'[0;39m
+[2024-07-24 21:08:18 [32mINFO [0;39m restartedMain] [com.example.prick.PrickApplication] [36mStarted PrickApplication in 1.625 seconds (process running for 1.921)[0;39m
+[2024-07-24 21:08:18 [32mINFO [0;39m RMI TCP Connection(2)-192.168.9.15] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring DispatcherServlet 'dispatcherServlet'[0;39m
+[2024-07-24 21:08:18 [32mINFO [0;39m RMI TCP Connection(2)-192.168.9.15] [org.springframework.web.servlet.DispatcherServlet] [36mInitializing Servlet 'dispatcherServlet'[0;39m
+[2024-07-24 21:08:18 [32mINFO [0;39m RMI TCP Connection(2)-192.168.9.15] [org.springframework.web.servlet.DispatcherServlet] [36mCompleted initialization in 1 ms[0;39m
+[2024-07-24 21:08:18 [32mINFO [0;39m RMI TCP Connection(1)-192.168.9.15] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Starting...[0;39m
+[2024-07-24 21:08:18 [33mWARN [0;39m RMI TCP Connection(1)-192.168.9.15] [org.mariadb.jdbc.message.server.ErrorPacket] [36mError: 1049-42000: Unknown database 'trick_test'[0;39m
+[2024-07-24 21:08:19 [33mWARN [0;39m RMI TCP Connection(1)-192.168.9.15] [org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator] [36mDataSource health check failed[0;39m
+org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:84)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:342)
+	at org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator.getProduct(DataSourceHealthIndicator.java:122)
+	at org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator.doDataSourceHealthCheck(DataSourceHealthIndicator.java:105)
+	at org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator.doHealthCheck(DataSourceHealthIndicator.java:100)
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82)
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:82)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:41)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getLoggedHealth(HealthEndpointSupport.java:172)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:145)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateContribution(HealthEndpointSupport.java:156)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:141)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:110)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:81)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:76)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:66)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:281)
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74)
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:124)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:97)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:814)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:802)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1472)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1310)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1405)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at java.base/jdk.internal.reflect.GeneratedMethodAccessor14.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.sql.SQLSyntaxErrorException: (conn=659) Unknown database 'trick_test'
+	at org.mariadb.jdbc.export.ExceptionFactory.createException(ExceptionFactory.java:289)
+	at org.mariadb.jdbc.export.ExceptionFactory.create(ExceptionFactory.java:378)
+	at org.mariadb.jdbc.client.impl.ConnectionHelper.authenticationHandler(ConnectionHelper.java:279)
+	at org.mariadb.jdbc.client.impl.StandardClient.<init>(StandardClient.java:195)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:69)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:95)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:26)
+	at net.sf.log4jdbc.sql.jdbcapi.DriverSpy.connect(DriverSpy.java:401)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:160)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:118)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81)
+	... 47 common frames omitted
+[2024-07-24 21:08:36 [32mINFO [0;39m restartedMain] [com.example.prick.PrickApplication] [36mStarting PrickApplication using Java 17.0.10 with PID 1732 (E:\tice\prick\build\classes\java\main started by HOME in E:\tice\prick)[0;39m
+[2024-07-24 21:08:36 [32mINFO [0;39m restartedMain] [com.example.prick.PrickApplication] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
+[2024-07-24 21:08:36 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mDevtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable[0;39m
+[2024-07-24 21:08:36 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mFor additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'[0;39m
+[2024-07-24 21:08:37 [33mWARN [0;39m restartedMain] [org.mybatis.spring.mapper.ClassPathMapperScanner] [36mNo MyBatis mapper was found in '[com.example.prick]' package. Please check your configuration.[0;39m
+[2024-07-24 21:08:37 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8080 (http)[0;39m
+[2024-07-24 21:08:37 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8080"][0;39m
+[2024-07-24 21:08:37 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
+[2024-07-24 21:08:37 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardEngine] [36mStarting Servlet engine: [Apache Tomcat/10.1.26][0;39m
+[2024-07-24 21:08:37 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring embedded WebApplicationContext[0;39m
+[2024-07-24 21:08:37 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [36mRoot WebApplicationContext: initialization completed in 788 ms[0;39m
+[2024-07-24 21:08:38 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
+[2024-07-24 21:08:38 [32mINFO [0;39m restartedMain] [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver] [36mExposing 15 endpoints beneath base path '/actuator'[0;39m
+[2024-07-24 21:08:38 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8080"][0;39m
+[2024-07-24 21:08:38 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8080 (http) with context path '/'[0;39m
+[2024-07-24 21:08:38 [32mINFO [0;39m restartedMain] [com.example.prick.PrickApplication] [36mStarted PrickApplication in 1.758 seconds (process running for 2.088)[0;39m
+[2024-07-24 21:08:38 [32mINFO [0;39m RMI TCP Connection(2)-192.168.9.15] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring DispatcherServlet 'dispatcherServlet'[0;39m
+[2024-07-24 21:08:38 [32mINFO [0;39m RMI TCP Connection(2)-192.168.9.15] [org.springframework.web.servlet.DispatcherServlet] [36mInitializing Servlet 'dispatcherServlet'[0;39m
+[2024-07-24 21:08:38 [32mINFO [0;39m RMI TCP Connection(2)-192.168.9.15] [org.springframework.web.servlet.DispatcherServlet] [36mCompleted initialization in 0 ms[0;39m
+[2024-07-24 21:08:38 [32mINFO [0;39m RMI TCP Connection(1)-192.168.9.15] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Starting...[0;39m
+[2024-07-24 21:08:38 [32mINFO [0;39m RMI TCP Connection(1)-192.168.9.15] [com.zaxxer.hikari.pool.HikariPool] [36mHikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@377340c1[0;39m
+[2024-07-24 21:08:38 [32mINFO [0;39m RMI TCP Connection(1)-192.168.9.15] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Start completed.[0;39m
+[2024-07-24 21:09:37 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown initiated...[0;39m
+[2024-07-24 21:09:37 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown completed.[0;39m
