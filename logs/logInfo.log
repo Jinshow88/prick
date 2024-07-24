@@ -141,3 +141,326 @@ Caused by: java.sql.SQLSyntaxErrorException: (conn=659) Unknown database 'trick_
 [2024-07-24 21:08:38 [32mINFO [0;39m RMI TCP Connection(1)-192.168.9.15] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Start completed.[0;39m
 [2024-07-24 21:09:37 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown initiated...[0;39m
 [2024-07-24 21:09:37 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown completed.[0;39m
+[2024-07-24 21:48:59 [32mINFO [0;39m restartedMain] [com.example.prick.PrickApplication] [36mStarting PrickApplication using Java 17.0.10 with PID 19596 (C:\Users\이진현\Documents\프로젝트\prick\build\classes\java\main started by 이진현 in C:\Users\이진현\Documents\프로젝트\prick)[0;39m
+[2024-07-24 21:48:59 [32mINFO [0;39m restartedMain] [com.example.prick.PrickApplication] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
+[2024-07-24 21:48:59 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mDevtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable[0;39m
+[2024-07-24 21:48:59 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mFor additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'[0;39m
+[2024-07-24 21:49:01 [32mINFO [0;39m restartedMain] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [36mBootstrapping Spring Data JPA repositories in DEFAULT mode.[0;39m
+[2024-07-24 21:49:01 [32mINFO [0;39m restartedMain] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [36mFinished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.[0;39m
+[2024-07-24 21:49:01 [33mWARN [0;39m restartedMain] [org.mybatis.spring.mapper.ClassPathMapperScanner] [36mNo MyBatis mapper was found in '[com.example.prick]' package. Please check your configuration.[0;39m
+[2024-07-24 21:49:01 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8080 (http)[0;39m
+[2024-07-24 21:49:01 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8080"][0;39m
+[2024-07-24 21:49:01 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
+[2024-07-24 21:49:01 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardEngine] [36mStarting Servlet engine: [Apache Tomcat/10.1.26][0;39m
+[2024-07-24 21:49:01 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring embedded WebApplicationContext[0;39m
+[2024-07-24 21:49:01 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [36mRoot WebApplicationContext: initialization completed in 1913 ms[0;39m
+[2024-07-24 21:49:02 [32mINFO [0;39m restartedMain] [org.hibernate.jpa.internal.util.LogHelper] [36mHHH000204: Processing PersistenceUnitInfo [name: default][0;39m
+[2024-07-24 21:49:02 [32mINFO [0;39m restartedMain] [org.hibernate.Version] [36mHHH000412: Hibernate ORM core version 6.5.2.Final[0;39m
+[2024-07-24 21:49:02 [32mINFO [0;39m restartedMain] [org.hibernate.cache.internal.RegionFactoryInitiator] [36mHHH000026: Second-level cache disabled[0;39m
+[2024-07-24 21:49:02 [32mINFO [0;39m restartedMain] [org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo] [36mNo LoadTimeWeaver setup: ignoring JPA class transformer[0;39m
+[2024-07-24 21:49:02 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Starting...[0;39m
+[2024-07-24 21:49:02 [33mWARN [0;39m restartedMain] [org.mariadb.jdbc.message.server.ErrorPacket] [36mError: 1049-42000: Unknown database 'prick_test'[0;39m
+[2024-07-24 21:49:03 [33mWARN [0;39m restartedMain] [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator] [36mHHH000342: Could not obtain connection to query metadata[0;39m
+java.lang.NullPointerException: Cannot invoke "org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(java.sql.SQLException, String)" because the return value of "org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.sqlExceptionHelper()" is null
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:290)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:123)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:77)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:221)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:189)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.example.prick.PrickApplication.main(PrickApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+[2024-07-24 21:49:03 [31mERROR[0;39m restartedMain] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [36mFailed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)[0;39m
+[2024-07-24 21:49:03 [33mWARN [0;39m restartedMain] [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] [36mException encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)[0;39m
+[2024-07-24 21:49:03 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStopping service [Tomcat][0;39m
+[2024-07-24 21:49:03 [32mINFO [0;39m restartedMain] [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger] [36m
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.[0;39m
+[2024-07-24 21:49:03 [31mERROR[0;39m restartedMain] [org.springframework.boot.SpringApplication] [36mApplication run failed[0;39m
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.example.prick.PrickApplication.main(PrickApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:276)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:221)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:189)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802)
+	... 20 common frames omitted
+Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:191)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:87)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentWithDefaults(JdbcEnvironmentInitiator.java:152)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:362)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:123)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:77)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	... 35 common frames omitted
+[2024-07-24 21:51:05 [32mINFO [0;39m restartedMain] [com.example.prick.PrickApplication] [36mStarting PrickApplication using Java 17.0.10 with PID 18920 (C:\Users\이진현\Documents\프로젝트\prick\build\classes\java\main started by 이진현 in C:\Users\이진현\Documents\프로젝트\prick)[0;39m
+[2024-07-24 21:51:05 [32mINFO [0;39m restartedMain] [com.example.prick.PrickApplication] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
+[2024-07-24 21:51:05 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mDevtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable[0;39m
+[2024-07-24 21:51:05 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mFor additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'[0;39m
+[2024-07-24 21:51:06 [32mINFO [0;39m restartedMain] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [36mBootstrapping Spring Data JPA repositories in DEFAULT mode.[0;39m
+[2024-07-24 21:51:06 [32mINFO [0;39m restartedMain] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [36mFinished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.[0;39m
+[2024-07-24 21:51:06 [33mWARN [0;39m restartedMain] [org.mybatis.spring.mapper.ClassPathMapperScanner] [36mNo MyBatis mapper was found in '[com.example.prick]' package. Please check your configuration.[0;39m
+[2024-07-24 21:51:06 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8080 (http)[0;39m
+[2024-07-24 21:51:06 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8080"][0;39m
+[2024-07-24 21:51:06 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
+[2024-07-24 21:51:06 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardEngine] [36mStarting Servlet engine: [Apache Tomcat/10.1.26][0;39m
+[2024-07-24 21:51:06 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring embedded WebApplicationContext[0;39m
+[2024-07-24 21:51:06 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [36mRoot WebApplicationContext: initialization completed in 1445 ms[0;39m
+[2024-07-24 21:51:07 [32mINFO [0;39m restartedMain] [org.hibernate.jpa.internal.util.LogHelper] [36mHHH000204: Processing PersistenceUnitInfo [name: default][0;39m
+[2024-07-24 21:51:07 [32mINFO [0;39m restartedMain] [org.hibernate.Version] [36mHHH000412: Hibernate ORM core version 6.5.2.Final[0;39m
+[2024-07-24 21:51:07 [32mINFO [0;39m restartedMain] [org.hibernate.cache.internal.RegionFactoryInitiator] [36mHHH000026: Second-level cache disabled[0;39m
+[2024-07-24 21:51:07 [32mINFO [0;39m restartedMain] [org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo] [36mNo LoadTimeWeaver setup: ignoring JPA class transformer[0;39m
+[2024-07-24 21:51:07 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Starting...[0;39m
+[2024-07-24 21:51:07 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.pool.HikariPool] [36mHikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@94dc3b7[0;39m
+[2024-07-24 21:51:07 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Start completed.[0;39m
+[2024-07-24 21:51:07 [32mDEBUG[0;39m restartedMain] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.executeQuery(ProxyStatement.java:110)
+1. SELECT @@character_set_database, @@sql_mode
+ {executed in 0 msec}[0;39m
+[2024-07-24 21:51:08 [32mINFO [0;39m restartedMain] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [36mHHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)[0;39m
+[2024-07-24 21:51:08 [32mDEBUG[0;39m restartedMain] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+1. drop table if exists user
+ {executed in 31 msec}[0;39m
+[2024-07-24 21:51:08 [32mDEBUG[0;39m restartedMain] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+1. create table user (
+        user_id bigint not null auto_increment,
+        nm varchar(50) not null,
+        uid varchar(50) not null,
+        upw varchar(100) not null,
+        pic varchar(200),
+        primary key (user_id)
+    ) engine=InnoDB
+ {executed in 3 msec}[0;39m
+[2024-07-24 21:51:08 [32mINFO [0;39m restartedMain] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [36mInitialized JPA EntityManagerFactory for persistence unit 'default'[0;39m
+[2024-07-24 21:51:08 [33mWARN [0;39m restartedMain] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [36mspring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning[0;39m
+[2024-07-24 21:51:09 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
+[2024-07-24 21:51:09 [32mINFO [0;39m restartedMain] [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver] [36mExposing 1 endpoint beneath base path '/actuator'[0;39m
+[2024-07-24 21:51:09 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8080"][0;39m
+[2024-07-24 21:51:09 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8080 (http) with context path '/'[0;39m
+[2024-07-24 21:51:09 [32mINFO [0;39m restartedMain] [com.example.prick.PrickApplication] [36mStarted PrickApplication in 4.846 seconds (process running for 5.317)[0;39m
+[2024-07-24 21:51:10 [32mINFO [0;39m RMI TCP Connection(2)-192.168.9.19] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring DispatcherServlet 'dispatcherServlet'[0;39m
+[2024-07-24 21:51:10 [32mINFO [0;39m RMI TCP Connection(2)-192.168.9.19] [org.springframework.web.servlet.DispatcherServlet] [36mInitializing Servlet 'dispatcherServlet'[0;39m
+[2024-07-24 21:51:10 [32mINFO [0;39m RMI TCP Connection(2)-192.168.9.19] [org.springframework.web.servlet.DispatcherServlet] [36mCompleted initialization in 3 ms[0;39m
+[2024-07-24 21:51:36 [32mINFO [0;39m SpringApplicationShutdownHook] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [36mClosing JPA EntityManagerFactory for persistence unit 'default'[0;39m
+[2024-07-24 21:51:36 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown initiated...[0;39m
+[2024-07-24 21:51:36 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown completed.[0;39m
+[2024-07-24 22:08:58 [32mINFO [0;39m restartedMain] [com.example.prick.PrickApplication] [36mStarting PrickApplication using Java 17.0.10 with PID 13216 (C:\Users\이진현\Documents\프로젝트\prick\build\classes\java\main started by 이진현 in C:\Users\이진현\Documents\프로젝트\prick)[0;39m
+[2024-07-24 22:08:58 [32mINFO [0;39m restartedMain] [com.example.prick.PrickApplication] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
+[2024-07-24 22:08:58 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mDevtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable[0;39m
+[2024-07-24 22:08:58 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mFor additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'[0;39m
+[2024-07-24 22:08:59 [32mINFO [0;39m restartedMain] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [36mBootstrapping Spring Data JPA repositories in DEFAULT mode.[0;39m
+[2024-07-24 22:08:59 [32mINFO [0;39m restartedMain] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [36mFinished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.[0;39m
+[2024-07-24 22:08:59 [33mWARN [0;39m restartedMain] [org.mybatis.spring.mapper.ClassPathMapperScanner] [36mNo MyBatis mapper was found in '[com.example.prick]' package. Please check your configuration.[0;39m
+[2024-07-24 22:08:59 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8080 (http)[0;39m
+[2024-07-24 22:08:59 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8080"][0;39m
+[2024-07-24 22:08:59 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
+[2024-07-24 22:08:59 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardEngine] [36mStarting Servlet engine: [Apache Tomcat/10.1.26][0;39m
+[2024-07-24 22:08:59 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring embedded WebApplicationContext[0;39m
+[2024-07-24 22:08:59 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [36mRoot WebApplicationContext: initialization completed in 1464 ms[0;39m
+[2024-07-24 22:09:00 [32mINFO [0;39m restartedMain] [org.hibernate.jpa.internal.util.LogHelper] [36mHHH000204: Processing PersistenceUnitInfo [name: default][0;39m
+[2024-07-24 22:09:00 [32mINFO [0;39m restartedMain] [org.hibernate.Version] [36mHHH000412: Hibernate ORM core version 6.5.2.Final[0;39m
+[2024-07-24 22:09:00 [32mINFO [0;39m restartedMain] [org.hibernate.cache.internal.RegionFactoryInitiator] [36mHHH000026: Second-level cache disabled[0;39m
+[2024-07-24 22:09:00 [32mINFO [0;39m restartedMain] [org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo] [36mNo LoadTimeWeaver setup: ignoring JPA class transformer[0;39m
+[2024-07-24 22:09:00 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Starting...[0;39m
+[2024-07-24 22:09:00 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.pool.HikariPool] [36mHikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@2980dce8[0;39m
+[2024-07-24 22:09:00 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Start completed.[0;39m
+[2024-07-24 22:09:00 [32mDEBUG[0;39m restartedMain] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.executeQuery(ProxyStatement.java:110)
+1. SELECT @@character_set_database, @@sql_mode
+ {executed in 0 msec}[0;39m
+[2024-07-24 22:09:01 [32mINFO [0;39m restartedMain] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [36mHHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)[0;39m
+[2024-07-24 22:09:01 [32mDEBUG[0;39m restartedMain] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+1. drop table if exists user
+ {executed in 4 msec}[0;39m
+[2024-07-24 22:09:01 [32mDEBUG[0;39m restartedMain] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+1. create table user (
+        user_id bigint not null auto_increment,
+        nm varchar(50) not null,
+        uid varchar(50) not null,
+        upw varchar(100) not null,
+        pic varchar(200),
+        primary key (user_id)
+    ) engine=InnoDB
+ {executed in 6 msec}[0;39m
+[2024-07-24 22:09:01 [32mINFO [0;39m restartedMain] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [36mInitialized JPA EntityManagerFactory for persistence unit 'default'[0;39m
+[2024-07-24 22:09:01 [33mWARN [0;39m restartedMain] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [36mspring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning[0;39m
+[2024-07-24 22:09:03 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
+[2024-07-24 22:09:03 [32mINFO [0;39m restartedMain] [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver] [36mExposing 1 endpoint beneath base path '/actuator'[0;39m
+[2024-07-24 22:09:03 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8080"][0;39m
+[2024-07-24 22:09:03 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8080 (http) with context path '/'[0;39m
+[2024-07-24 22:09:03 [32mINFO [0;39m restartedMain] [com.example.prick.PrickApplication] [36mStarted PrickApplication in 5.107 seconds (process running for 5.868)[0;39m
+[2024-07-24 22:09:03 [32mINFO [0;39m RMI TCP Connection(1)-192.168.9.19] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring DispatcherServlet 'dispatcherServlet'[0;39m
+[2024-07-24 22:09:03 [32mINFO [0;39m RMI TCP Connection(1)-192.168.9.19] [org.springframework.web.servlet.DispatcherServlet] [36mInitializing Servlet 'dispatcherServlet'[0;39m
+[2024-07-24 22:09:03 [32mINFO [0;39m RMI TCP Connection(1)-192.168.9.19] [org.springframework.web.servlet.DispatcherServlet] [36mCompleted initialization in 2 ms[0;39m
+[2024-07-24 22:09:49 [32mINFO [0;39m SpringApplicationShutdownHook] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [36mClosing JPA EntityManagerFactory for persistence unit 'default'[0;39m
+[2024-07-24 22:09:49 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown initiated...[0;39m
+[2024-07-24 22:09:49 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown completed.[0;39m
+[2024-07-24 22:09:52 [32mINFO [0;39m restartedMain] [com.example.prick.PrickApplication] [36mStarting PrickApplication using Java 17.0.10 with PID 8416 (C:\Users\이진현\Documents\프로젝트\prick\build\classes\java\main started by 이진현 in C:\Users\이진현\Documents\프로젝트\prick)[0;39m
+[2024-07-24 22:09:52 [32mINFO [0;39m restartedMain] [com.example.prick.PrickApplication] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
+[2024-07-24 22:09:52 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mDevtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable[0;39m
+[2024-07-24 22:09:52 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mFor additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'[0;39m
+[2024-07-24 22:09:54 [32mINFO [0;39m restartedMain] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [36mBootstrapping Spring Data JPA repositories in DEFAULT mode.[0;39m
+[2024-07-24 22:09:54 [32mINFO [0;39m restartedMain] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [36mFinished Spring Data repository scanning in 4 ms. Found 0 JPA repository interfaces.[0;39m
+[2024-07-24 22:09:54 [33mWARN [0;39m restartedMain] [org.mybatis.spring.mapper.ClassPathMapperScanner] [36mNo MyBatis mapper was found in '[com.example.prick]' package. Please check your configuration.[0;39m
+[2024-07-24 22:09:54 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8080 (http)[0;39m
+[2024-07-24 22:09:54 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8080"][0;39m
+[2024-07-24 22:09:54 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
+[2024-07-24 22:09:54 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardEngine] [36mStarting Servlet engine: [Apache Tomcat/10.1.26][0;39m
+[2024-07-24 22:09:54 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring embedded WebApplicationContext[0;39m
+[2024-07-24 22:09:54 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [36mRoot WebApplicationContext: initialization completed in 1942 ms[0;39m
+[2024-07-24 22:09:55 [32mINFO [0;39m restartedMain] [org.hibernate.jpa.internal.util.LogHelper] [36mHHH000204: Processing PersistenceUnitInfo [name: default][0;39m
+[2024-07-24 22:09:55 [32mINFO [0;39m restartedMain] [org.hibernate.Version] [36mHHH000412: Hibernate ORM core version 6.5.2.Final[0;39m
+[2024-07-24 22:09:55 [32mINFO [0;39m restartedMain] [org.hibernate.cache.internal.RegionFactoryInitiator] [36mHHH000026: Second-level cache disabled[0;39m
+[2024-07-24 22:09:55 [32mINFO [0;39m restartedMain] [org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo] [36mNo LoadTimeWeaver setup: ignoring JPA class transformer[0;39m
+[2024-07-24 22:09:55 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Starting...[0;39m
+[2024-07-24 22:09:55 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.pool.HikariPool] [36mHikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@c2615ce[0;39m
+[2024-07-24 22:09:55 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Start completed.[0;39m
+[2024-07-24 22:09:55 [32mDEBUG[0;39m restartedMain] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.executeQuery(ProxyStatement.java:110)
+1. SELECT @@character_set_database, @@sql_mode
+ {executed in 0 msec}[0;39m
+[2024-07-24 22:09:56 [32mINFO [0;39m restartedMain] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [36mHHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)[0;39m
+[2024-07-24 22:09:56 [32mDEBUG[0;39m restartedMain] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+1. drop table if exists user
+ {executed in 14 msec}[0;39m
+[2024-07-24 22:09:56 [32mDEBUG[0;39m restartedMain] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+1. create table user (
+        created_at datetime(6) not null,
+        updated_at datetime(6) not null,
+        user_id bigint not null auto_increment,
+        nm varchar(50) not null,
+        uid varchar(50) not null,
+        upw varchar(100) not null,
+        pic varchar(200),
+        primary key (user_id)
+    ) engine=InnoDB
+ {executed in 4 msec}[0;39m
+[2024-07-24 22:09:56 [32mINFO [0;39m restartedMain] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [36mInitialized JPA EntityManagerFactory for persistence unit 'default'[0;39m
+[2024-07-24 22:09:56 [33mWARN [0;39m restartedMain] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [36mspring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning[0;39m
+[2024-07-24 22:09:57 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
+[2024-07-24 22:09:57 [32mINFO [0;39m restartedMain] [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver] [36mExposing 1 endpoint beneath base path '/actuator'[0;39m
+[2024-07-24 22:09:57 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8080"][0;39m
+[2024-07-24 22:09:57 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8080 (http) with context path '/'[0;39m
+[2024-07-24 22:09:57 [32mINFO [0;39m restartedMain] [com.example.prick.PrickApplication] [36mStarted PrickApplication in 5.397 seconds (process running for 6.057)[0;39m
+[2024-07-24 22:09:57 [32mINFO [0;39m RMI TCP Connection(1)-192.168.9.19] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring DispatcherServlet 'dispatcherServlet'[0;39m
+[2024-07-24 22:09:57 [32mINFO [0;39m RMI TCP Connection(1)-192.168.9.19] [org.springframework.web.servlet.DispatcherServlet] [36mInitializing Servlet 'dispatcherServlet'[0;39m
+[2024-07-24 22:09:57 [32mINFO [0;39m RMI TCP Connection(1)-192.168.9.19] [org.springframework.web.servlet.DispatcherServlet] [36mCompleted initialization in 0 ms[0;39m
+[2024-07-24 22:44:52 [32mINFO [0;39m SpringApplicationShutdownHook] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [36mClosing JPA EntityManagerFactory for persistence unit 'default'[0;39m
+[2024-07-24 22:44:52 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown initiated...[0;39m
+[2024-07-24 22:44:52 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown completed.[0;39m
+[2024-07-24 22:45:00 [32mINFO [0;39m restartedMain] [com.example.prick.PrickApplication] [36mStarting PrickApplication using Java 17.0.10 with PID 14692 (C:\Users\이진현\Documents\프로젝트\prick\build\classes\java\main started by 이진현 in C:\Users\이진현\Documents\프로젝트\prick)[0;39m
+[2024-07-24 22:45:00 [32mINFO [0;39m restartedMain] [com.example.prick.PrickApplication] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
+[2024-07-24 22:45:00 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mDevtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable[0;39m
+[2024-07-24 22:45:00 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mFor additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'[0;39m
+[2024-07-24 22:45:01 [32mINFO [0;39m restartedMain] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [36mBootstrapping Spring Data JPA repositories in DEFAULT mode.[0;39m
+[2024-07-24 22:45:01 [32mINFO [0;39m restartedMain] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [36mFinished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.[0;39m
+[2024-07-24 22:45:01 [33mWARN [0;39m restartedMain] [org.mybatis.spring.mapper.ClassPathMapperScanner] [36mNo MyBatis mapper was found in '[com.example.prick]' package. Please check your configuration.[0;39m
+[2024-07-24 22:45:01 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8080 (http)[0;39m
+[2024-07-24 22:45:01 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8080"][0;39m
+[2024-07-24 22:45:01 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
+[2024-07-24 22:45:01 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardEngine] [36mStarting Servlet engine: [Apache Tomcat/10.1.26][0;39m
+[2024-07-24 22:45:01 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring embedded WebApplicationContext[0;39m
+[2024-07-24 22:45:01 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [36mRoot WebApplicationContext: initialization completed in 1723 ms[0;39m
+[2024-07-24 22:45:02 [32mINFO [0;39m restartedMain] [org.hibernate.jpa.internal.util.LogHelper] [36mHHH000204: Processing PersistenceUnitInfo [name: default][0;39m
+[2024-07-24 22:45:02 [32mINFO [0;39m restartedMain] [org.hibernate.Version] [36mHHH000412: Hibernate ORM core version 6.5.2.Final[0;39m
+[2024-07-24 22:45:02 [32mINFO [0;39m restartedMain] [org.hibernate.cache.internal.RegionFactoryInitiator] [36mHHH000026: Second-level cache disabled[0;39m
+[2024-07-24 22:45:02 [32mINFO [0;39m restartedMain] [org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo] [36mNo LoadTimeWeaver setup: ignoring JPA class transformer[0;39m
+[2024-07-24 22:45:02 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Starting...[0;39m
+[2024-07-24 22:45:02 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.pool.HikariPool] [36mHikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@1889b39e[0;39m
+[2024-07-24 22:45:02 [32mINFO [0;39m restartedMain] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Start completed.[0;39m
+[2024-07-24 22:45:02 [32mDEBUG[0;39m restartedMain] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.executeQuery(ProxyStatement.java:110)
+1. SELECT @@character_set_database, @@sql_mode
+ {executed in 1 msec}[0;39m
+[2024-07-24 22:45:03 [32mINFO [0;39m restartedMain] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [36mHHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)[0;39m
+[2024-07-24 22:45:03 [32mDEBUG[0;39m restartedMain] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+1. drop table if exists user
+ {executed in 12 msec}[0;39m
+[2024-07-24 22:45:03 [32mDEBUG[0;39m restartedMain] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+1. create table user (
+        created_at datetime(6) not null,
+        updated_at datetime(6) not null,
+        user_id bigint not null auto_increment,
+        nm varchar(50) not null,
+        uid varchar(50) not null,
+        upw varchar(100) not null,
+        pic varchar(200),
+        primary key (user_id)
+    ) engine=InnoDB
+ {executed in 3 msec}[0;39m
+[2024-07-24 22:45:03 [32mINFO [0;39m restartedMain] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [36mInitialized JPA EntityManagerFactory for persistence unit 'default'[0;39m
+[2024-07-24 22:45:03 [33mWARN [0;39m restartedMain] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [36mspring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning[0;39m
+[2024-07-24 22:45:04 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
+[2024-07-24 22:45:04 [32mINFO [0;39m restartedMain] [org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver] [36mExposing 1 endpoint beneath base path '/actuator'[0;39m
+[2024-07-24 22:45:04 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8080"][0;39m
+[2024-07-24 22:45:04 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8080 (http) with context path '/'[0;39m
+[2024-07-24 22:45:04 [32mINFO [0;39m restartedMain] [com.example.prick.PrickApplication] [36mStarted PrickApplication in 4.838 seconds (process running for 5.538)[0;39m
+[2024-07-24 22:45:04 [32mINFO [0;39m RMI TCP Connection(2)-192.168.9.19] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring DispatcherServlet 'dispatcherServlet'[0;39m
+[2024-07-24 22:45:04 [32mINFO [0;39m RMI TCP Connection(2)-192.168.9.19] [org.springframework.web.servlet.DispatcherServlet] [36mInitializing Servlet 'dispatcherServlet'[0;39m
+[2024-07-24 22:45:04 [32mINFO [0;39m RMI TCP Connection(2)-192.168.9.19] [org.springframework.web.servlet.DispatcherServlet] [36mCompleted initialization in 2 ms[0;39m
+[2024-07-24 22:45:29 [32mINFO [0;39m SpringApplicationShutdownHook] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [36mClosing JPA EntityManagerFactory for persistence unit 'default'[0;39m
+[2024-07-24 22:45:29 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown initiated...[0;39m
+[2024-07-24 22:45:29 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown completed.[0;39m
