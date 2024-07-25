@@ -1,7 +1,12 @@
 package com.example.prick.entity;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
+@Setter
+@Getter
+@Entity
 public class FeedEntity {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long feedId;
