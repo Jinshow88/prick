@@ -1,4 +1,4 @@
-package com.example.prick;
+package com.games.prick;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

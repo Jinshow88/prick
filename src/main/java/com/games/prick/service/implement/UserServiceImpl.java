@@ -1,6 +1,6 @@
-package com.example.prick.service.implement;
+package com.games.prick.service.implement;
 
-import com.example.prick.service.UserService;
+import com.games.prick.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

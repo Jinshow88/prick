@@ -1,4 +1,4 @@
-package com.example.prick.service.implement;
+package com.games.prick.service.implement;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

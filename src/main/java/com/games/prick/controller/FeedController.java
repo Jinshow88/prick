@@ -1,4 +1,4 @@
-package com.example.prick.controller;
+package com.games.prick.controller;
 
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
@@ -10,6 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("")
-@Tag(name = "유저 컨트롤러")
-public class UserController {
+@Tag(name = "피드 컨트롤러")
+public class FeedController {
 }

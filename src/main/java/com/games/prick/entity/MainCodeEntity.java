@@ -1,4 +1,4 @@
-package com.example.prick.entity;
+package com.games.prick.entity;
 
 public class MainCodeEntity {
 

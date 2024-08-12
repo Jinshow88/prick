@@ -1,6 +1,6 @@
-package com.example.prick.entity;
+package com.games.prick.entity;
 
-import com.example.prick.entity.common.UpdateAt;
+import com.games.prick.entity.common.UpdateAt;
 import jakarta.persistence.*;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
