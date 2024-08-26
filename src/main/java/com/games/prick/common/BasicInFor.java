@@ -2,7 +2,7 @@ package com.games.prick.common;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.games.prick.repository.PlantDataRepository;
+import com.games.prick.repository.BasicInForRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.ParameterizedTypeReference;
@@ -15,10 +15,10 @@ import java.util.Map;
 
 @Service
 @RequiredArgsConstructor
-public class OpenData {
+public class BasicInFor {
 
-    private final WebClient webClient = WebClient.builder().baseUrl("https://api.neople.co.kr/df/servers/<serverId>/characters/<characterId>?apikey=<apikey>").build();
-    private final PlantDataRepository plantDataRepository;  // JPA 리포지토리를 주입받음
+    private final WebClient webClient = WebClient.builder().baseUrl("https://api.neople.co.kr/df/servers/<serverId>/characters/<characterId>?apikey=Q08kMP1vfysTkL6kPjK4W5Z8ZQtKMI3K").build();
+    private final BasicInForRepository basicInForRepository;  // JPA 리포지토리를 주입받음
 
     @Value("${open-data.service-key}")
     private String serviceKey;
@@ -54,7 +54,7 @@ public class OpenData {
                 }
 
                 // 가져온 데이터를 데이터베이스에 저장
-                plantDataRepository.saveAll(list);  // JPA 리포지토리를 사용하여 리스트를 저장
+                basicInForRepository.saveAll(list);  // JPA 리포지토리를 사용하여 리스트를 저장
                 page++;
             } catch (Exception e) {
                 e.printStackTrace();
@@ -64,6 +64,6 @@ public class OpenData {
     }
 
     public void deleteAllPlantData() {
-        plantDataRepository.deleteAll();  // 모든 데이터를 삭제
+        basicInForRepository.deleteAll();  // 모든 데이터를 삭제
     }
 }
