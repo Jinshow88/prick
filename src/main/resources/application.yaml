@@ -15,12 +15,11 @@ spring:
     default-property-inclusion: non_null
   jpa:
     hibernate:
-      ddl-auto: create #entity(테이블)를 서버 기동 때 마다 새롭게 만든다
+      ddl-auto: none #entity(테이블)를 서버 기동 때 마다 새롭게 만든다
     show-sql: true # JPA 가 만든 쿼리문 로그에 출력
     properties:
       hibernate:
         format_sql: true #로그 찍을 때 보기 편하게 포맷딩해서 출력
-
   security:
     oauth2:
       client:
@@ -74,6 +73,9 @@ spring:
 
 mybatis:
   mapper-locations: mappers/**/*.xml
+
+open-data:
+  service-key: Q08kMP1vfysTkL6kPjK4W5Z8ZQtKMI3K
 
 springdoc:
   api-docs:
