@@ -7,13 +7,12 @@ import lombok.Setter;
 @Setter
 @Getter
 @Entity
-public class SearchEntity {
+public class BasicInFor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long searchId;
+    private Long basicId;
     @Column(length = 20)
     private String serverId;
     @Column(length = 20)
-    private String characterName;
+    private String characterId;
 }
-
