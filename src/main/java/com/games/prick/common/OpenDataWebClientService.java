@@ -35,8 +35,8 @@ public class OpenDataWebClientService{}
 //     */
 //
 //    // 요청을 받을 서버의 기본 도메인 이나 IP 주소를 기입
-////    private final WebClient webClient = WebClient.builder().baseUrl("http://openapi.nature.go.kr").build();
-//    private final WebClient webClient = WebClient.builder().baseUrl("https://api.neople.co.kr/df/servers/<serverId>/characters/<characterId>?apikey=<apikey>").build();
+//    private final WebClient webClient = WebClient.builder().baseUrl("http://openapi.nature.go.kr").build();
+////    private final WebClient webClient = WebClient.builder().baseUrl("https://api.neople.co.kr/df/servers/<serverId>/characters/<characterId>?apikey=<apikey>").build();
 //
 //    private final PlantDataMapper mapper ;
 //

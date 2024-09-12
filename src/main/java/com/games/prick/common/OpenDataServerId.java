@@ -32,10 +32,10 @@ public class OpenDataServerId {
                     .get()
                     .uri("openapi/service/rest/PlantService/plntIlstrSearch" +
                             "?serviceKey=" + serviceKey +
-                            "&st=1" +
-                            "&numOfRows=300" +
-                            "&pageNo=" + page +
-                            "&_type=json"
+                            "&st=1" +// 검색 조건 또는 추가 파라미터(st=1)를 URI에 포함.
+                            "&numOfRows=300" +// 한번에 가져올 데이터 수
+                            "&pageNo=" + page +  // 페이지 번호(pageNo=page), page 변수에 따라 페이지를 다르게 요청.
+                            "&_type=json" // 요청 결과를 JSON 형식으로 받기 위한 설정.
                     )
                     .retrieve()
                     .bodyToMono(new ParameterizedTypeReference<Map<String, Object>>() {});
