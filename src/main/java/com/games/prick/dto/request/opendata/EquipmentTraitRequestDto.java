@@ -8,9 +8,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class SearchRequestDto {
+public class EquipmentTraitRequestDto {
     @JsonIgnore
     String apikey;
-
-    String characterName;
 }

@@ -15,9 +15,10 @@ public class BasicInfo {
     @Column(length = 20)
     private String serverId;
 
-    @ManyToOne
-    @JoinColumn(name = "character_id", nullable = false) @Comment("객실 ID")
-    private Search characterId;
+//    @ManyToOne
+//    @JoinColumn(name = "character_id", nullable = false) @Comment("객실 ID")
+@Column(length = 50)
+    private String characterId;
     @Column(length = 30)
     private String characterName;
     @Column(length = 20)
@@ -40,7 +41,7 @@ public class BasicInfo {
     private String guildName;
 
 
-    public BasicInfo(String serverId, Search characterId, String characterName, String level, String jobId
+    public BasicInfo(String serverId, String characterId, String characterName, String level, String jobId
             , String jobGrowId, String jobName, String jobGrowName, String fame, String adventureName
             , String guildId, String guildName) {
         this.serverId = serverId;

@@ -1,11 +1,9 @@
 package com.games.prick.repository;
 
-
-import com.games.prick.entity.Search;
+import com.games.prick.entity.Avatar;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface SearchRepository extends JpaRepository<Search, Long> {
-    String findByCharacterId(String characterName);
+public interface BuffEquipmentRepository extends JpaRepository<Avatar, Long> {
 }

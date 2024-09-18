@@ -2,17 +2,15 @@ package com.games.prick.service.implement;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.games.prick.dto.open.OpenBasicResponseDto;
-import com.games.prick.dto.open.OpenSearchResponseDto;
-import com.games.prick.dto.open.OpenServerIdResponseDto;
-import com.games.prick.dto.request.opendata.BasicRequestDto;
-import com.games.prick.dto.request.opendata.SearchRequestDto;
-import com.games.prick.dto.request.opendata.ServerIdRequestDto;
+import com.games.prick.dto.object.SearcResult;
+import com.games.prick.dto.object.ServerDto;
+import com.games.prick.dto.request.opendata.*;
+import com.games.prick.dto.response.*;
 import com.games.prick.entity.BasicInfo;
 import com.games.prick.entity.Search;
 import com.games.prick.entity.ServerId;
 
-import com.games.prick.repository.BasicInForRepository;
+import com.games.prick.repository.BasicInfoRepository;
 import com.games.prick.repository.SearchRepository;
 import com.games.prick.repository.ServerIdRepository;
 import com.games.prick.service.OpenDataServerIdService;
@@ -22,6 +20,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.client.RestTemplate;
+
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Slf4j
 @Service
@@ -33,12 +35,15 @@ public class OpenDataServerIdServiceImpl implements OpenDataServerIdService {
 
     private final ServerIdRepository serverIdRepository;
     private final SearchRepository searchRepository;
-    private final BasicInForRepository basicInFoRepository;
+    private final BasicInfoRepository basicInFoRepository;
 
+    //서버 불러오기
     @Override
-    public ResponseEntity<? super OpenServerIdResponseDto> serverId(ServerIdRequestDto dto) {
+    @Transactional
+    public ResponseEntity<? super ServerIdResponseDto> serverId(ServerIdRequestDto dto) {
         // fetchAndSavePublicData() 메서드를 호출
 
+        List<ServerDto> result = new ArrayList<>();
         try {
             RestTemplate restTemplate = new RestTemplate();
             String apiUrlWithKey = API_URL + "?apikey=" + API_KEY;
@@ -71,15 +76,18 @@ public class OpenDataServerIdServiceImpl implements OpenDataServerIdService {
 
         // 서버 ID에 맞는 응답 생성 로직을 추가해야 함
         // 지금은 임시로 null 리턴
-        return OpenServerIdResponseDto.success(null, null);
+        return ServerIdResponseDto.success(result);
     }
-    @Override
-    public ResponseEntity<? super OpenSearchResponseDto> search(SearchRequestDto dto) {
-        // fetchAndSavePublicData() 메서드를 호출
 
+    //캐릭터 검색
+    @Override
+    @Transactional
+    public ResponseEntity<? super SearchResponseDto> search(SearchRequestDto dto) {
+        // fetchAndSavePublicData() 메서드를 호출
+        String characterName = dto.getCharacterName();
         try {
             RestTemplate restTemplate = new RestTemplate();
-            String apiUrlWithKey = API_URL + "/all/characters?characterName=운빵이&apikey=" + API_KEY;
+            String apiUrlWithKey = API_URL + "/all/characters?characterName=" + characterName + "&apikey=" + API_KEY;
             String respons = restTemplate.getForObject(apiUrlWithKey, String.class);
 
             ObjectMapper objectMapper = new ObjectMapper();
@@ -93,7 +101,7 @@ public class OpenDataServerIdServiceImpl implements OpenDataServerIdService {
                     // 각 서버의 ID와 이름 추출
                     String serverId = server.path("serverId").asText();
                     String characterId = server.path("characterId").asText();
-                    String characterName = server.path("characterName").asText();
+//                    String characterName = server.path("characterName").asText();
                     String level = server.path("level").asText();
                     String jobId = server.path("jobId").asText();
                     String jobGrowId = server.path("jobGrowId").asText();
@@ -114,50 +122,58 @@ public class OpenDataServerIdServiceImpl implements OpenDataServerIdService {
         } catch (Exception e) {
             log.error("데이터 저장 중 오류 발생", e);
         }
-
+        SearcResult result = null;
+        result.setServerId(result.getServerId());
+        result.setCharacterId(result.getCharacterId());
+        result.setLevel(result.getLevel());
+        result.setJobId(result.getJobId());
+        result.setJobGrowId(result.getJobGrowId());
+        result.setJobName(result.getJobName());
+        result.setJobGrowName(result.getJobGrowName());
+        result.setFame(result.getFame());
         // 서버 ID에 맞는 응답 생성 로직을 추가해야 함
         // 지금은 임시로 null 리턴
-        return OpenSearchResponseDto.success(null, null, null, null, null, null, null, null, null);
+
+        return SearchResponseDto.success(result);
     }
+
+    //기본정보
     @Override
-    public ResponseEntity<? super OpenBasicResponseDto> basic(BasicRequestDto dto) {
+    @Transactional
+    public ResponseEntity<? super BasicResponseDto> basic(BasicRequestDto dto) {
         // fetchAndSavePublicData() 메서드를 호출
         String serverId = dto.getServerId();
-        Search characterId = searchRepository.findByCharacterId(dto.getCharacterName());
+//        Search characterId = searchRepository.findByCharacterId(dto.getCharacterName());
+        String characterId = dto.getCharacterName();
 
-
-//        String characterId = dto.getCharacterName();
 
         try {
             RestTemplate restTemplate = new RestTemplate();
-            String apiUrlWithKey = API_URL + "/"+serverId+"/characters/"+characterId+"?apikey=" + API_KEY;
+            String apiUrlWithKey = API_URL + "/" + serverId + "/characters/" + characterId + "?apikey=" + API_KEY;
             String respons = restTemplate.getForObject(apiUrlWithKey, String.class);
 
             ObjectMapper objectMapper = new ObjectMapper();
             JsonNode rootNode = objectMapper.readTree(respons);
 
 
-                    // 각 서버의 ID와 이름 추출
+            // 각 서버의 ID와 이름 추출
 //                    String serverId = rootNode.path("serverId").asText();
 //                    String characterId = rootNode.path("characterId").asText();
-                    String characterName = rootNode.path("characterName").asText();
-                    String level = rootNode.path("level").asText();
-                    String jobId = rootNode.path("jobId").asText();
-                    String jobGrowId = rootNode.path("jobGrowId").asText();
-                    String jobName = rootNode.path("jobName").asText();
-                    String jobGrowName = rootNode.path("jobGrowName").asText();
-                    String fame = rootNode.path("fame").asText();
-                    String adventureName = rootNode.path("adventureName").asText();
-                    String guildId = rootNode.path("guildId").asText();
-                    String guildName = rootNode.path("guildName").asText();
+            String characterName = rootNode.path("characterName").asText();
+            String level = rootNode.path("level").asText();
+            String jobId = rootNode.path("jobId").asText();
+            String jobGrowId = rootNode.path("jobGrowId").asText();
+            String jobName = rootNode.path("jobName").asText();
+            String jobGrowName = rootNode.path("jobGrowName").asText();
+            String fame = rootNode.path("fame").asText();
+            String adventureName = rootNode.path("adventureName").asText();
+            String guildId = rootNode.path("guildId").asText();
+            String guildName = rootNode.path("guildName").asText();
 
 
-                    BasicInfo basicInfo = new BasicInfo(serverId, characterId, characterName, level, jobId
-                            , jobGrowId, jobName, jobGrowName, fame,adventureName,guildId,guildName);
-                    basicInFoRepository.save(basicInfo);  // DB에 저장
-
-
-
+            BasicInfo basicInfo = new BasicInfo(serverId, characterId, characterName, level, jobId
+                    , jobGrowId, jobName, jobGrowName, fame, adventureName, guildId, guildName);
+            basicInFoRepository.save(basicInfo);  // DB에 저장
 
 
             log.info("데이터가 성공적으로 저장되었습니다.");
@@ -167,39 +183,77 @@ public class OpenDataServerIdServiceImpl implements OpenDataServerIdService {
 
         // 서버 ID에 맞는 응답 생성 로직을 추가해야 함
         // 지금은 임시로 null 리턴
-        return OpenBasicResponseDto.success(null, null, null, null, null, null, null, null, null,null,null,null);
+        return BasicResponseDto.success(null, null, null, null, null, null, null, null, null, null, null, null);
     }
-    // 데이터를 외부 API로부터 가져오고 DB에 저장하는 메서드
-//    @Transactional
-//    public void fetchAndSavePublicData() {
-//        try {
-//            RestTemplate restTemplate = new RestTemplate();
-//            String apiUrlWithKey = API_URL + "?apikey=" + API_KEY;
-//            String response = restTemplate.getForObject(apiUrlWithKey, String.class);
-//
-//            ObjectMapper objectMapper = new ObjectMapper();
-//            JsonNode rootNode = objectMapper.readTree(response);
-//            JsonNode servers = rootNode.path("rows");
-//
-//            if (servers != null && servers.isArray()) {
-//                for (int i = 0; i < servers.size(); i++) {
-//                    JsonNode server = servers.get(i);  // 각 서버 데이터
-//
-//                    // 각 서버의 ID와 이름 추출
-//                    String serverId = server.path("serverId").asText();
-//                    String serverName = server.path("serverName").asText();
-//
-//
-//                    ServerId serversd = new ServerId(serverId, serverName);
-//                    serverIdRepository.save(serversd);  // DB에 저장
-//                }
-//            } else {
-//                log.warn("서버 데이터가 없거나 형식이 올바르지 않습니다.");
-//            }
-//
-//            log.info("데이터가 성공적으로 저장되었습니다.");
-//        } catch (Exception e) {
-//            log.error("데이터 저장 중 오류 발생", e);
-//        }
-//    }
+
+    //능력치 정보
+    @Override
+    @Transactional
+    public ResponseEntity<? super StatusResponseDto> status(StatusRequestDto dto) {
+        return null;
+    }
+
+    //장비
+    @Override
+    @Transactional
+    public ResponseEntity<? super EquipmentResponseDto> equipment(EquipmentRequestDto dto) {
+        return null;
+    }
+
+    //아바타
+    @Override
+    @Transactional
+    public ResponseEntity<? super AvatarResponseDto> avatar(AvatarRequestDto dto) {
+        return null;
+    }
+
+    //크리쳐
+    @Override
+    @Transactional
+    public ResponseEntity<? super CreatureResponseDto> creature(CreatureRequestDto dto) {
+        return null;
+    }
+
+    //휘장
+    @Override
+    @Transactional
+    public ResponseEntity<? super FlagResponseDto> flag(FlagRequestDto dto) {
+        return null;
+    }
+
+    //탈리스만
+    @Override
+    @Transactional
+    public ResponseEntity<? super TalismanResponseDto> talisman(TalismanRequestDto dto) {
+        return null;
+    }
+
+    //장비특성
+    @Override
+    @Transactional
+    public ResponseEntity<? super EquipmentTraitResponseDto> equipmentTrait(EquipmentTraitRequestDto dto) {
+        return null;
+    }
+
+    //버프 장비
+    @Override
+    @Transactional
+    public ResponseEntity<? super BuffEquipmentResponseDto> buffEquipment(BuffEquipmentRequestDto dto) {
+        return null;
+    }
+
+    //버프 아바타
+    @Override
+    @Transactional
+    public ResponseEntity<? super BuffAvatarResponseDto> buffAvatar(BuffAvatarRequestDto dto) {
+        return null;
+    }
+
+    //버프크리쳐
+    @Override
+    @Transactional
+    public ResponseEntity<? super BuffCreatureResponseDto> buffCreature(BuffCreatureRequestDto dto) {
+        return null;
+    }
+
 }

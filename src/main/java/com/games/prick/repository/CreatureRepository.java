@@ -1,10 +1,9 @@
 package com.games.prick.repository;
 
-
-import com.games.prick.entity.BasicInfo;
+import com.games.prick.entity.Avatar;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface BasicInForRepository extends JpaRepository<BasicInfo, Long> {
+public interface CreatureRepository extends JpaRepository<Avatar, Long> {
 }

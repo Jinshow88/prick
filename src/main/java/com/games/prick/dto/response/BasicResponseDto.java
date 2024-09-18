@@ -1,4 +1,4 @@
-package com.games.prick.dto.open;
+package com.games.prick.dto.response;
 
 import com.games.prick.dto.ResponseDto;
 import lombok.Getter;
@@ -17,7 +17,7 @@ import static com.games.prick.common.GlobalConst.SUCCESS_MESSAGE;
 @Setter
 @SuperBuilder
 @ToString
-public class OpenBasicResponseDto extends ResponseDto {
+public class BasicResponseDto extends ResponseDto {
     String serverId;
     String characterId;
     String characterName;
@@ -31,9 +31,9 @@ public class OpenBasicResponseDto extends ResponseDto {
     String guildId;
     String guildName;
 
-    private OpenBasicResponseDto(String serverId, String characterId, String characterName, String level,
-                                  String jobId, String jobGrowId, String jobName, String jobGrowName, String fame
-                                  ,String adventureName, String guildId, String guildName) {
+    private BasicResponseDto(String serverId, String characterId, String characterName, String level,
+                             String jobId, String jobGrowId, String jobName, String jobGrowName, String fame
+                                  , String adventureName, String guildId, String guildName) {
         super(SUCCESS_CODE, SUCCESS_MESSAGE);
         this.serverId = serverId;
         this.characterId = characterId;
@@ -52,7 +52,7 @@ public class OpenBasicResponseDto extends ResponseDto {
     public static ResponseEntity<ResponseDto> success(String serverId, String characterId, String characterName, String level,
                                                       String jobId, String jobGrowId, String jobName, String jobGrowName, String fame
             ,String adventureName, String guildId, String guildName) {
-        OpenBasicResponseDto result = new OpenBasicResponseDto(serverId, characterId, characterName, level,
+        BasicResponseDto result = new BasicResponseDto(serverId, characterId, characterName, level,
                 jobId, jobGrowId, jobName, jobGrowName, fame,adventureName,guildId,guildName);
         return ResponseEntity.status(HttpStatus.OK).body(result);
     }
