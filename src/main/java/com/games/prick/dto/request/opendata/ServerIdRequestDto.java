@@ -9,6 +9,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ServerIdRequestDto {
-     @JsonIgnore String serviceKey;
+      @JsonIgnore  String apikey;
 
 }

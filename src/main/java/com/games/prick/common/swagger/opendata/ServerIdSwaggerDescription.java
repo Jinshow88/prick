@@ -4,7 +4,7 @@ public class ServerIdSwaggerDescription {
 
     public static final String USER_BOOK_DESCRIPTION =
 
-            "<strong>로그인한 유저의 예약내역을 불러옵니다.</strong>" +
+            "<strong>서버 내역을 불러옵니다.</strong>" +
                     "<p>로그인이 필요한 기능입니다. 상단 Authorize 에 토큰값을 입력 후 이용해주세요.</p>" +
                     "<p>-------------------------------------------------</p>" +
                     "<p>01. reservationBeforeResultSetList : 예약중인 글램핑 리스트를 불러옵니다.</p>" +

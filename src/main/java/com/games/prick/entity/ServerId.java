@@ -15,5 +15,14 @@ public class ServerId {
     private String serverId;
     @Column(length = 20)
     private String serverName;
+
+    public ServerId( String serverId, String serverName) {
+        this.serverId = serverId;
+        this.serverName = serverName;
+    }
+
+    public ServerId() {
+
+    }
 }
 
