@@ -7,5 +7,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface SearchRepository extends JpaRepository<Search, Long> {
-
+    Search findByCharacterId(String characterName);
 }
