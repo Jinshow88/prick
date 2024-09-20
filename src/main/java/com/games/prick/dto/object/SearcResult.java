@@ -17,4 +17,8 @@ public class SearcResult {
     String jobName;
     String jobGrowName;
     String fame;
+
+    public SearcResult() {
+
+    }
 }

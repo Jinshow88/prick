@@ -8,7 +8,7 @@ import com.games.prick.dto.request.opendata.*;
 import com.games.prick.dto.response.*;
 import com.games.prick.entity.BasicInfo;
 import com.games.prick.entity.Search;
-import com.games.prick.entity.ServerId;
+import com.games.prick.entity.Server;
 
 import com.games.prick.repository.BasicInfoRepository;
 import com.games.prick.repository.SearchRepository;
@@ -62,7 +62,7 @@ public class OpenDataServerIdServiceImpl implements OpenDataServerIdService {
                     String serverName = server.path("serverName").asText();
 
 
-                    ServerId serversd = new ServerId(serverId, serverName);
+                    Server serversd = new Server(serverId, serverName);
                     serverIdRepository.save(serversd);  // DB에 저장
                 }
             } else {
@@ -122,7 +122,7 @@ public class OpenDataServerIdServiceImpl implements OpenDataServerIdService {
         } catch (Exception e) {
             log.error("데이터 저장 중 오류 발생", e);
         }
-        SearcResult result = null;
+        SearcResult result = new SearcResult();
         result.setServerId(result.getServerId());
         result.setCharacterId(result.getCharacterId());
         result.setLevel(result.getLevel());
@@ -142,9 +142,9 @@ public class OpenDataServerIdServiceImpl implements OpenDataServerIdService {
     @Transactional
     public ResponseEntity<? super BasicResponseDto> basic(BasicRequestDto dto) {
         // fetchAndSavePublicData() 메서드를 호출
-        String serverId = dto.getServerId();
+        String serverId = basicInFoRepository.getServer(dto.getServerName());
 //        Search characterId = searchRepository.findByCharacterId(dto.getCharacterName());
-        String characterId = dto.getCharacterName();
+        String characterId = basicInFoRepository.getCharacter(dto.getCharacterName(), dto.getServerName());
 
 
         try {

@@ -7,7 +7,7 @@ import lombok.Setter;
 @Setter
 @Getter
 @Entity
-public class ServerId {
+public class Server {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -16,12 +16,12 @@ public class ServerId {
     @Column(length = 20)
     private String serverName;
 
-    public ServerId( String serverId, String serverName) {
+    public Server(String serverId, String serverName) {
         this.serverId = serverId;
         this.serverName = serverName;
     }
 
-    public ServerId() {
+    public Server() {
 
     }
 

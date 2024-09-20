@@ -14,7 +14,7 @@ public class BasicRequestDto {
 
     String characterName;
 
-    String serverId;
-    @JsonIgnore
+    String serverName;
+
     String characterId;
 }
