@@ -143,7 +143,7 @@ public class OpenDataServerIdServiceImpl implements OpenDataServerIdService {
     public ResponseEntity<? super BasicResponseDto> basic(BasicRequestDto dto) {
         // fetchAndSavePublicData() 메서드를 호출
         String serverId = basicInFoRepository.getServer(dto.getServerName());
-//        Search characterId = searchRepository.findByCharacterId(dto.getCharacterName());
+
         String characterId = basicInFoRepository.getCharacter(dto.getCharacterName(), dto.getServerName());
 
 
