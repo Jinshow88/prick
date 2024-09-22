@@ -80,8 +80,8 @@ spring:
 mybatis:
   mapper-locations: mappers/**/*.xml
 
-open-data:
-  service-key: Q08kMP1vfysTkL6kPjK4W5Z8ZQtKMI3K
+open:
+  key: Q08kMP1vfysTkL6kPjK4W5Z8ZQtKMI3K
 
 springdoc:
   api-docs:
@@ -97,6 +97,9 @@ springdoc:
 
 file:
   directory: C:\Users\HOME\Desktop\qhrk
+api:
+  url: https://api.neople.co.kr/df/servers
+
 
 ---
 
